@@ -6,6 +6,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 
 public class MainController {
@@ -21,8 +23,11 @@ public class MainController {
     public Klienti getKlienti() {
         return service.getKlienti();
     }
+
     @GetMapping("/klienti")
     public String showUserList(Model model) {
+        List<Klienti> listKlienti = (List<Klienti>) service.listAll();
+        model.addAttribute("listKlienti", listKlienti);
         return "users";
     }
 }
