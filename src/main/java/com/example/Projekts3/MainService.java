@@ -27,4 +27,7 @@ public class MainService {
         return repo.findById(1).get();
 
     }
+    public Iterable<Klienti> listAll(){
+         return  repo.findAll();
+    }
 }

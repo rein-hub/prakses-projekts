@@ -2,6 +2,7 @@ package com.example.Projekts3;
 
 import com.example.Projekts3.Klienti.Klienti;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,5 +20,9 @@ public class MainController {
     @GetMapping("/get")
     public Klienti getKlienti() {
         return service.getKlienti();
+    }
+    @GetMapping("/klienti")
+    public String showUserList(Model model) {
+        return "users";
     }
 }
