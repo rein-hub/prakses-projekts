@@ -28,6 +28,6 @@ public class MainController {
     public String showUserList(Model model) {
         List<Klienti> listKlienti = (List<Klienti>) service.listAll();
         model.addAttribute("listKlienti", listKlienti);
-        return "users";
+        return "klienti";
     }
 }
