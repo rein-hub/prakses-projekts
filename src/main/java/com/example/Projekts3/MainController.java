@@ -21,4 +21,3 @@ public class MainController {
         return service.getKlienti();
     }
 }
-11234
