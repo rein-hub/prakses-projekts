@@ -31,7 +31,7 @@ public class KlientiRepositoryTests {
         Assertions.assertThat(savedKlienti).isNotNull();
         Assertions.assertThat(savedKlienti.getId()).isGreaterThan(0);
     }
-  /*  @Test
+    @Test
     public void testListAll() {
         Iterable<Klienti> klienti = repo.findAll();
         Assertions.assertThat(klienti).hasSizeGreaterThan(0);
@@ -39,12 +39,11 @@ public class KlientiRepositoryTests {
         for (Klienti klients : klienti) {
             System.out.println(klients);
         }
-    }*/
-   /* @Test
+    }
+   @Test
    public void testUpdate() {
-
+       Integer klientiId = 1;
         Optional<Klienti> optionalKlienti = repo.findById(klientiId);
-        Integer klientiId = 1;
         Klienti klienti = optionalKlienti.get();
         klienti.setParole("hello");
         repo.save(klienti);
@@ -55,8 +54,9 @@ public class KlientiRepositoryTests {
     }
     @Test
     public void testGet() {
-        Optional<Klienti> optionalKlienti = repo.findById(klientiId);
         Integer klientiId = 1;
+        Optional<Klienti> optionalKlienti = repo.findById(klientiId);
+
         Klienti klienti = optionalKlienti.get();
-    }*/
+    }
 }

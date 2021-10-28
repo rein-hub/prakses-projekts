@@ -25,7 +25,7 @@ public class Klienti {
     @Column(length = 45, nullable = false, name = "Uzvards")
     private String Uzvards;
 
-
+    private boolean enabled;
         public Integer getId() {
             return id;
         }
@@ -75,6 +75,14 @@ public class Klienti {
                 ", vards='" + vards + '\'' +
                 ", Uzvards='" + Uzvards + '\'' +
                 '}';
+    }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
     }
 }
 
