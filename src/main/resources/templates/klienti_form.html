@@ -2,13 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.com">
 <head>
     <meta charset="UTF-8">
-    <title>Pievienot Klientu</title>
+    <title>[[${pageTitle}]]</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body>
 <div class="container-fluid ">
-    <div class="text-center"><h2> Pievienot Klientu </h2></div>
+    <div class="text-center"><h2>[[{pageTitle}]]</h2></div>
 
     <form th:action="@{/klienti/saglabat}" method="post" th:object="${klienti}"
      style="max-width: 500px margin: 0 auto;">
