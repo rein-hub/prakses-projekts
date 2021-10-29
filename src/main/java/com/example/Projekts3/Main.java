@@ -10,6 +10,6 @@ public class Main {
     @GetMapping("")
     public String showHomePage() {
         System.out.println("Main");
-        return "index";
+        return "index[";
     }
 }
