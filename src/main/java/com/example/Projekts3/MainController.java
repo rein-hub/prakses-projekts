@@ -37,21 +37,16 @@ public class MainController {
     @PostMapping("/klienti/save")
     public String saveKlienti(Klienti klienti, RedirectAttributes ra) {
         service.save(klienti);
-        ra.addAttribute("message", "The user has been saved sucessfully");
+        ra.addFlashAttribute("message", "The user has been saved sucessfully");
         return "redirect:/klienti";
     }
 
     @GetMapping("/klienti/edit/{id}")
-    public String showEditForm(@PathVariable("id") Integer id, Model model, RedirectAttributes ra) {
-        try {
-            Klienti klienti = service.get(id);
-            model.addAttribute("klienti", klienti);
-            model.addAttribute("pageTitle", "Edit Klienti (ID: " + id + ")");
-            return "klienti_form";
-        } catch (KlientiNotFoundException e) {
-            e.printStackTrace();
-
-        }
+    public String showEditForm(@PathVariable("id") Integer id, Model model, RedirectAttributes ra) throws KlientiNotFoundException {
+        Klienti klienti = service.get(id);
+        model.addAttribute("klienti", klienti);
+        model.addAttribute("pageTitle", "Edit Klienti (ID: " + id + ")");
+        return "klienti_form";
 
 
     }

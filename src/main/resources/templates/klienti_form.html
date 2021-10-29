@@ -12,6 +12,7 @@
 
     <form th:action="@{/klienti/saglabat}" method="post" th:object="${klienti}"
      style="max-width: 500px margin: 0 auto;">
+        <input type="hidden" th:field="*{id}"/>
 
         <div class="border" border-secondary rounded p-3>
         <div class="form-group row">
@@ -56,7 +57,7 @@
 </div>
 <script type="text/javascript">
     function cancelForm() {
-    window.location = "[[@{klienti}]]"
+    window.location = "[[@{klienti}]]";
     }
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

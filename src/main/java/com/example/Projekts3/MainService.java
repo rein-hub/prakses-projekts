@@ -23,7 +23,7 @@ public class MainService {
         repo.save(klienti);
     }
 
-    public Klienti get(Integer id){
+    public Klienti get(Integer id) throws KlientiNotFoundException {
      Optional<Klienti> result = repo.findById(id);
      if (result.isPresent()){
          return result.get();

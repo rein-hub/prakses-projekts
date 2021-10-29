@@ -10,7 +10,7 @@
 
    <div> <h1> Rediģet klientus </h1></div>
     <div class="m-2">
-        <a class="h3 " th:href="@{/klienti/jauns">Pievienot Klientu</a>
+        <a class="h3 " th:href="@{/klienti/new">Pievienot Klientu</a>
     </div>
     <div>
     <table class="table table-bordered">
@@ -20,6 +20,7 @@
             <th>Epasts</th>
             <th>Vards</th>
             <th>Uzvards</th>
+            <th>Enabled</th>
             <th></th>
         </tr>
         </thead>
@@ -30,6 +31,7 @@
             <td>[[${klienti.Epasts}]]</td>
             <td>[[${klenti.Vards}]]</td>
             <td>[[${klienti.Uzvards}]]</td>
+            <td>[[${klienti.Enabled}]]</td>
             <td>
                 <a class="h4 mr-3" th:href="@{'/klienti/rediget' +${klienti.id}}">Rediģēt</a>
                 <a class="h4" th:href="@{'/klienti/dzest' +${klienti.id}}">dzēst</a>
