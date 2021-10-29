@@ -11,4 +11,8 @@ public class KlientiNotFoundException extends Throwable {
     public KlientiNotFoundException(String message) {
         super(message);
     }
+
+    public KlientiNotFoundException() {
+
+    }
 }

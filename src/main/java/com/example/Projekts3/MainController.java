@@ -30,7 +30,7 @@ public class MainController {
     @GetMapping("/klienti/new")
     public String showNewForm(Model model) {
         model.addAttribute("klienti", new Klienti());
-        model.addAttribute("pageTitle", "Add New Klienti")
+        model.addAttribute("pageTitle", "Add New Klienti");
         return "klienti_form";
     }
 
@@ -40,17 +40,19 @@ public class MainController {
         ra.addAttribute("message", "The user has been saved sucessfully");
         return "redirect:/klienti";
     }
+
     @GetMapping("/klienti/edit/{id}")
     public String showEditForm(@PathVariable("id") Integer id, Model model, RedirectAttributes ra) {
-    try {
-        Klienti klienti = service.get(id);
-        model.addAttribute("klienti", klienti);
-        model.addAttribute("pageTitle", "Edit Klienti (ID: "+ id +")");
-        return "klienti_form";
-    } catch (KlientiNotFoundException e) {
-        e.printStackTrace();
+        try {
+            Klienti klienti = service.get(id);
+            model.addAttribute("klienti", klienti);
+            model.addAttribute("pageTitle", "Edit Klienti (ID: " + id + ")");
+            return "klienti_form";
+        } catch (KlientiNotFoundException e) {
+            e.printStackTrace();
+
+        }
+
 
     }
-
-
 }
