@@ -30,4 +30,11 @@ public class MainService {
      }
      throw new KlientiNotFoundException();
     }
+    public void delete(Integer id) {
+        Long count = repo.countById(id);
+        if (count == null || count == 0) {
+
+        }
+        repo.deleteById(id);
+    }
 }

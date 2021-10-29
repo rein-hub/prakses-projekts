@@ -48,6 +48,5 @@ public class MainController {
         model.addAttribute("pageTitle", "Edit Klienti (ID: " + id + ")");
         return "klienti_form";
 
-
     }
 }

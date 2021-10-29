@@ -5,6 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;
 
 public interface KlientiRepository extends CrudRepository<Klienti , Integer>{
+public Long countById(Integer id);
 
 }
 
